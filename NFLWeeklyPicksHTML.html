@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="NFLWeeklyPicksJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="NFLWeeklyPicksCSS.css">
+    <title>NFL Weekly Picks</title>
+</head>
+<body>
+    <center>
+        <div style="background: gainsboro; width: fit-content">
+            <input style="margin-right: 10px;" type="button" id="prevWeek" value='<' onclick="loadWeek(currWeek - 1);">
+            <b><span id="weekNum"></span></b>
+            <input style="margin-left: 10px;" type="button" id="prevWeek" value='>' onclick="loadWeek(currWeek+ 1);">
+        </div>
+    </center>
+    <table id="PickEmGamesTable">
+        <thead>
+            <tr style="height: 30px;">
+                <th style="width: 85px">
+                    Home Team
+                </th>
+                <th style="width: 120px;">
+                    Details
+                </th>
+                <th style="width: 85px">
+                    Away Team
+                </th>
+            </tr>
+        </thead>
+        <tbody id="PickEmGamesTableBody"></tbody>
+    </table>
+    <center>
+        <input type="button" id="submitButton" value="Submit Picks" onclick="submitPicks()">
+    </center>
+</body>
+</html>
